@@ -4,7 +4,7 @@ import requests
 with open("data.json", "r", encoding="utf-8") as f:
     data = json.load(f)
 
-API_KEY = 'sk_5652dd77630493587ffd7d0b14669d1c2a023d4c5f0f9847'
+API_KEY = 'TIREI MINHA CHAVE'
 VOICE_ID = '21m00Tcm4TlvDq8ikWAM'  # Rachel
 url = f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}"
 
