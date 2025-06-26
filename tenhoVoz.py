@@ -5,8 +5,9 @@ from pydub import AudioSegment
 with open("resposta.json", "r", encoding="utf-8") as f:
     data_json = json.load(f)
 
-API_KEY = 'sk_5652dd77630493587ffd7d0b14669d1c2a023d4c5f0f9847'
+API_KEY = 'chave'
 VOICE_ID = 'lWq4KDY8znfkV0DrK8Vb'
+
 url = f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}"
 
 headers = {
