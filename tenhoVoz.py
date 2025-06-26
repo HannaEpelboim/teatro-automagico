@@ -2,12 +2,12 @@ import json
 import requests
 from pydub import AudioSegment
 
-with open("data.json", "r", encoding="utf-8") as f:
+with open("resposta.json", "r", encoding="utf-8") as f:
     data_json = json.load(f)
 
+API_KEY = 'chave'
+VOICE_ID = 'lWq4KDY8znfkV0DrK8Vb'
 
-API_KEY = 'TIREI MINHA CHAVE'
-VOICE_ID = '21m00Tcm4TlvDq8ikWAM'  # Rachel
 url = f"https://api.elevenlabs.io/v1/text-to-speech/{VOICE_ID}"
 
 headers = {
@@ -17,14 +17,14 @@ headers = {
 }
 
 # Carrega o efeito sonoro intercalado
-efeito_feliz = AudioSegment.from_file("teste01.mp3")
+musica_fundo_feliz = AudioSegment.from_file("feliz.mp3")
 
 # Carrega a música de fundo
-musica_fundo_original = AudioSegment.from_file("musica_fundo.mp3")
+musica_fundo_triste = AudioSegment.from_file("triste.mp3")
 
-for i, quadro in enumerate(data_json["tp"]):
-    text = quadro["fala"]
-
+for i, quadro in enumerate(data_json["historia"]):
+    text = quadro.get("paragrafo", "").strip()
+    # emocao = quadro.get("emocao", "").lower()
     payload = {
         "text": text,
         "model_id": "eleven_monolingual_v1",
@@ -42,35 +42,52 @@ for i, quadro in enumerate(data_json["tp"]):
         with open(fala_filename, "wb") as f:
             f.write(response.content)
         print(f"Áudio salvo como '{fala_filename}'")
-
+        
         # Carrega o áudio da fala
         fala = AudioSegment.from_file(fala_filename)
+        faixa = fala
+
+
         if(quadro["emocao"] == "feliz"):
-            print("Adicionando efeito sonoro para fala feliz...")
-            efeito = efeito_feliz
-            # Junta a fala com o efeito
-            faixa = fala + efeito
-        else:
-            faixa = fala
-
-
-        if(quadro["emocao"] == "triste"):
             print("Adicionando música de fundo para fala triste...")
             # Reduz o volume da música de fundo
-            fundo_reduzido = musica_fundo_original - 15
+            fundo_reduzido = musica_fundo_feliz - 15
 
             # Repete a música de fundo conforme necessário
             fundo_loop = fundo_reduzido * (len(faixa) // len(fundo_reduzido) + 1)
 
             # Faz o overlay (mistura)
             faixa_mixada = faixa.overlay(fundo_loop)
-        else:
+                # Salva a faixa individual com fundo
+            output_filename = f"fala_{i + 1}_mixada.mp3"
+            faixa_mixada.export(output_filename, format="mp3")
+            print(f"Fala {i + 1} mixada salva como '{output_filename}'\n")
+            
+       
+
+
+        if(quadro["emocao"] == "triste"):
+            print("Adicionando música de fundo para fala triste...")
+            # Reduz o volume da música de fundo
+            fundo_reduzido = musica_fundo_triste - 15
+
+            # Repete a música de fundo conforme necessário
+            fundo_loop = fundo_reduzido * (len(faixa) // len(fundo_reduzido) + 1)
+
+            # Faz o overlay (mistura)
+            faixa_mixada = faixa.overlay(fundo_loop)
+                # Salva a faixa individual com fundo
+            output_filename = f"fala_{i + 1}_mixada.mp3"
+            faixa_mixada.export(output_filename, format="mp3")
+            print(f"Fala {i + 1} mixada salva como '{output_filename}'\n")
+        if(quadro["emocao"] == "nervosa"):
+            pass
+        if(quadro["emocao"] == "engraçada"):
+           pass
+        else: #neutra
             faixa_mixada = faixa
 
-        # Salva a faixa individual com fundo
-        output_filename = f"fala_{i + 1}_mixada.mp3"
-        faixa_mixada.export(output_filename, format="mp3")
-        print(f"Fala {i + 1} mixada salva como '{output_filename}'\n")
+        
 
     else:
         print(f"Erro ao gerar fala {i + 1}: {response.status_code}")
