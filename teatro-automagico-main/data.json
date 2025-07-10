@@ -1,0 +1,18 @@
+{
+  "tp": [
+    {
+      "fala": "I wanna go to the park",
+      "emocao": "triste",
+      "A": "centro",
+      "B": "esquerda",
+      "C": "fora"
+    },
+    {
+      "fala": "I want lunch",
+      "emocao": "feliz",
+      "A": "esquerda",
+      "B": "fora",
+      "C": "centro"
+    }
+  ]
+}

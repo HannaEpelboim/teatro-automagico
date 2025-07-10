@@ -1,0 +1,47 @@
+{
+  "personagens": {
+    "A": "Detetive",
+    "B": "Assistente",
+    "C": "Mordomo"
+  },
+  "historia": [
+    {
+      "paragrafo": "",
+      "emocao": "aaa",
+      "horario": "noite",
+      "personagens": {
+        "A": {
+          "localizacao no palco": "fora-direita",
+          "acao": "nada"
+        },
+        "B": {
+          "localizacao no palco": "fora-esquerda",
+          "acao": "nada"
+        },
+        "C": {
+          "localizacao no palco": "fora-direita",
+          "acao": "nada"
+        }
+      }
+    },
+    {
+      "paragrafo": "I had the most beautiful dream last night. I was in a grand mansion, surrounded by opulence and mystery. The air was thick with suspense, and I felt a strange connection to the place.",
+      "emocao": "triste",
+      "horario": "noite",
+      "personagens": {
+        "A": {
+          "localizacao no palco": "esquerda",
+          "acao": "falando"
+        },
+        "B": {
+          "localizacao no palco": "direita",
+          "acao": "nada"
+        },
+        "C": {
+          "localizacao no palco": "centro",
+          "acao": "inclinado-esquerda"
+        }
+      }
+    }
+  ]
+}
