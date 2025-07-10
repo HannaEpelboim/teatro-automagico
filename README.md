@@ -79,3 +79,15 @@ O sistema recebe histórias no seguinte formato estruturado:
     stage_position: "offstage-right", "right", "center", "left", "offstage-left"
 
     action: "tilted-right", "tilted-left", "none", "speaking"
+
+# Funcionamento:
+Interface Web - O usuário define 3 personagens (A, B, C) e uma ideia de história através de um formulário Flask
+Geração de História - A IA (OpenAI) cria uma história estruturada baseada nos personagens e prompt fornecidos
+Conversão para JSON - A história é transformada em um JSON estruturado com cenas, posições e falas dos personagens
+Síntese de Áudio - Cada fala é convertida em áudio usando ElevenLabs TTS e salva como arquivo MP3
+Visualização - O p5.js renderiza os personagens em movimento na tela conforme as cenas da história
+Controle Físico - O Arduino controla motores, servos e LEDs para criar efeitos físicos sincronizados com a performance
+Tecnologias:
+Backend: Flask + OpenAI API + ElevenLabs TTS
+Frontend: HTML + p5.js (animação/áudio)
+Hardware: Arduino (motores stepper, servos, LEDs)
