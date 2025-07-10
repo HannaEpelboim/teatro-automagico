@@ -55,7 +55,8 @@ Ambiente:
 
  - LEDs que mudam de cor baseados na "emotion" do parágrafo.
 
-# Hardware
-<img width="1143" height="712" alt="image" src="https://github.com/user-attachments/assets/1ff305e3-cf44-4649-9569-b6b2eca673b7" />
+# Esquema de hardware
+<img width="1020" height="716" alt="image" src="https://github.com/user-attachments/assets/333a0635-fcc6-4c22-8bad-0e5bfa9a54a0" />
+
 
 # Vídeo
