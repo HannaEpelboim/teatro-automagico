@@ -1,6 +1,6 @@
 # Teatro Automágico
 
-O projeto tem como objetivo fazer um teatro automágico, no qual uma IA gera uma história que é representada por bonecos que vão para posições no palco e balançam, com elementos extras como luzes, voz e cenário. 
+O projeto tem como objetivo fazer um teatro automágico, no qual uma IA gera uma história e controla bonecos físicos que vão para posições no palco e balançam, com elementos extras como luzes, voz e cenário. 
 # Tecnologias Utilizadas
 
  - OpenAI API: gera histórias em linguagem natural, que são convertidas automaticamente para um formato JSON estruturado com parágrafos, personagens, emoções e posições de palco.
