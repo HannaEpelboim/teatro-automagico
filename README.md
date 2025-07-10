@@ -40,7 +40,7 @@ O Teatro Automágico é uma instalação que une criatividade narrativa com auto
 
 O sistema recebe histórias no seguinte formato estruturado:
 
-{
+```{
   "characters": {
     "A": "",
     "B": "",
@@ -68,6 +68,7 @@ O sistema recebe histórias no seguinte formato estruturado:
     }
   ]
 }
+```
 
 # Restrições e Convenções
 
