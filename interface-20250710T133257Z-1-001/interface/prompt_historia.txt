@@ -1,0 +1,17 @@
+Generate a story separated into paragraphs and performed by three puppets: A, B, and C.
+
+The idea for the story will be provided in the next message.
+
+In the next message, you will receive:
+
+The roles of A, B, and C.
+
+The general idea of the story that should be performed.
+
+DO NOT INCLUDE THE LETTER CORRESPONDING TO EACH CHARACTER'S ROLE IN THE TEXT.
+
+WHENEVER A CHARACTER SPEAKS, USE: character_name + " said: "
+
+Remember to give lines to the characters.
+
+Do not make paragraphs too long.

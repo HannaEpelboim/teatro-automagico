@@ -1,0 +1,161 @@
+{
+  "characters": {
+    "A": "Archer",
+    "B": "Wizard",
+    "C": "Fairy"
+  },
+  "story": [
+    {
+      "paragraph": "",
+      "emotion": "neutral",
+      "time": "day",
+      "characters": {
+        "A": {
+          "stage_position": "offstage-left",
+          "action": "none"
+        },
+        "B": {
+          "stage_position": "offstage-right",
+          "action": "none"
+        },
+        "C": {
+          "stage_position": "offstage-left",
+          "action": "none"
+        }
+      }
+    },
+    {
+      "paragraph": "Archer said: \"I’m starting to think we've been walking in circles all day. This forest looks endless.\"",
+      "emotion": "sad",
+      "time": "day",
+      "characters": {
+        "A": {
+          "stage_position": "left",
+          "action": "speaking"
+        },
+        "B": {
+          "stage_position": "right",
+          "action": "none"
+        },
+        "C": {
+          "stage_position": "offstage-right",
+          "action": "none"
+        }
+      }
+    },
+    {
+      "paragraph": "Wizard said: \"Indeed, the trees seem to shift their places as though enchanted. We must be cautious. Magic could be at work here.\"",
+      "emotion": "neutral",
+      "time": "day",
+      "characters": {
+        "A": {
+          "stage_position": "left",
+          "action": "none"
+        },
+        "B": {
+          "stage_position": "right",
+          "action": "speaking"
+        },
+        "C": {
+          "stage_position": "offstage-right",
+          "action": "none"
+        }
+      }
+    },
+    {
+      "paragraph": "Fairy said: \"Hello, travelers! You seem lost. I can help you find your way, but you must promise to guard the forest’s secrets.\"",
+      "emotion": "happy",
+      "time": "day",
+      "characters": {
+        "A": {
+          "stage_position": "left",
+          "action": "none"
+        },
+        "B": {
+          "stage_position": "right",
+          "action": "none"
+        },
+        "C": {
+          "stage_position": "center",
+          "action": "speaking"
+        }
+      }
+    },
+    {
+      "paragraph": "Archer said: \"A talking fairy? That’s a first. We would appreciate your help, but tell us, why do you need us to protect your secrets?\"",
+      "emotion": "curious",
+      "time": "day",
+      "characters": {
+        "A": {
+          "stage_position": "left",
+          "action": "speaking"
+        },
+        "B": {
+          "stage_position": "right",
+          "action": "none"
+        },
+        "C": {
+          "stage_position": "center",
+          "action": "none"
+        }
+      }
+    },
+    {
+      "paragraph": "Fairy said: \"This forest holds ancient magic, and if it falls into the wrong hands, it could be destroyed. You two seem brave and kind. Will you keep your promise?\"",
+      "emotion": "serious",
+      "time": "day",
+      "characters": {
+        "A": {
+          "stage_position": "left",
+          "action": "none"
+        },
+        "B": {
+          "stage_position": "right",
+          "action": "none"
+        },
+        "C": {
+          "stage_position": "center",
+          "action": "speaking"
+        }
+      }
+    },
+    {
+      "paragraph": "Wizard said: \"We swear to protect this place as if it were our own. Lead the way, little one.\"",
+      "emotion": "happy",
+      "time": "day",
+      "characters": {
+        "A": {
+          "stage_position": "left",
+          "action": "none"
+        },
+        "B": {
+          "stage_position": "right",
+          "action": "speaking"
+        },
+        "C": {
+          "stage_position": "center",
+          "action": "none"
+        }
+      }
+    },
+    {
+      "paragraph": "The fairy smiled and fluttered ahead, lighting a hidden path through the thick woods. The archer and wizard followed closely, feeling hopeful once more.",
+      "emotion": "happy",
+      "time": "day",
+      "characters": {
+        "A": {
+          "stage_position": "left",
+          "action": "none"
+        },
+        "B": {
+          "stage_position": "right",
+          "action": "none"
+        },
+        "C": {
+          "stage_position": "center",
+          "action": "none"
+        }
+      }
+    }
+  ]
+}

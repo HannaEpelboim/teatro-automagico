@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prompt do Teatro</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.7/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.7/lib/addons/p5.sound.min.js"></script>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <h2>Prompt do Teatro</h2>
+      <form method="post">
+          <label>Papel A:</label><br>
+          <input type="text" name="role_A"><br><br>
+
+          <label>Papel B:</label><br>
+          <input type="text" name="role_B"><br><br>
+
+          <label>Papel C:</label><br>
+          <input type="text" name="role_C"><br><br>
+
+          <label>Ideia:</label><br>
+          <textarea name="prompt"></textarea><br><br>
+
+          <input type="submit" value="Submit">
+      </form>
+
+      {% if result %}
+      <h3>Papéis definidos</h3>
+      <p>A: {{ result.role_A }}</p>
+      <p>B: {{ result.role_B }}</p>
+      <p>C: {{ result.role_C }}</p>
+
+      <h3>Ideia</h3>
+      <p>{{ result.prompt }}</p>
+      {% endif %}
+  
+
+    {% if sketch_active %}
+      <script src="{{ url_for('static', filename='action.js') }}"></script>
+      <script src="{{ url_for('static', filename='character.js') }}"></script>
+      <script src="{{ url_for('static', filename='sketch.js') }}"></script>
+    {% endif %}
+    
+    <button id="connectBtn">Connect to Arduino</button>
+</body>
+</html>

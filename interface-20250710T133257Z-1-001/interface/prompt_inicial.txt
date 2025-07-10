@@ -1,0 +1,90 @@
+Generate a JSON for a script separated into paragraphs and performed by three puppets: A, B, and C.
+
+The JSON format is as follows:
+
+{
+  "characters": {
+    "A": "",
+    "B": "",
+    "C": ""
+  },
+  "story": [
+    {
+      "paragraph": "",
+      "emotion": "",
+      "time": "",
+      "characters": {
+        "A": {
+          "stage_position": "",
+          "action": ""
+        },
+        "B": {
+          "stage_position": "",
+          "action": ""
+        },
+        "C": {
+          "stage_position": "",
+          "action": ""
+        }
+      }
+    },
+    {
+      "paragraph": "",
+      "emotion": "",
+      "time": "",
+      "characters": {
+        "A": {
+          "stage_position": "",
+          "action": ""
+        },
+        "B": {
+          "stage_position": "",
+          "action": ""
+        },
+        "C": {
+          "stage_position": "",
+          "action": ""
+        }
+      }
+    },
+    ...
+  ]
+}
+
+
+THE FIELDS CAN ONLY BE THE FOLLOWING OPTIONS:
+
+"emotion" can be: "sad", "happy", "neutral", "angry", or "funny"
+
+"time" can be: "day" or "night"
+
+"stage_position" can be: "offstage-right", "right", "center", "left", or "offstage-left"
+
+"action" can be: "tilted-right", "tilted-left", "none", or "speaking"
+
+NOTE:
+
+Avoid unnecessary movement.
+
+Avoid placing characters in the same position at the same time (except for offstage positions).
+
+Always begin with a first paragraph with an empty text where all characters are offstage.
+
+The story will be provided next.
+
+DO NOT MODIFY THE STORY, ONLY SEPARATE IT INTO PARAGRAPHS
+
+ONLY USE THE PREDEFINED OPTIONS IN THE FIELDS
+
+ONLY OUTPUT THE JSON
+
+
+
+
+
+
+
+
+
+
+
