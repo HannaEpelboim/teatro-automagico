@@ -40,6 +40,9 @@ const long POS_CENTER = 8000;
 const long POS_LEFT = 12000;
 const long POS_L_OUT = 16000;
 
+const long LUA = 0;
+const long SOL = 6000;
+
 // Constantes de Posição para o Servo (em ângulos)
 const int SERVO_LEFT_ANGLE = 45;
 const int SERVO_CENTER_ANGLE = 90;
@@ -230,12 +233,11 @@ void moveCharacter(int motorIndex, String positionCmd) {
 void moveScenery(int motorIndex, String positionCmd) {
   long targetPosition;
 
-  if (positionCmd == "c") targetPosition = POS_CENTER;
-  else if (positionCmd == "up") targetPosition = POS_LEFT;
-  else if (positionCmd == "down") targetPosition = POS_RIGHT;
-  else if (positionCmd == "outup") targetPosition = POS_L_OUT;
+  if (positionCmd == "sol") targetPosition = SOL;
+  else if (positionCmd == "lua") targetPosition = LUA;
+  
   else {
-    Serial.println(">> Erro: Posicao de cenario invalida ('c','up','down','outup').");
+    Serial.println(">> Erro: Posicao de cenario invalida ('sol','lua').");
     return;
   }
 
